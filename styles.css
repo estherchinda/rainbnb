@@ -1,0 +1,989 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00D4FF, #5200FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00D4FF;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #00D4FF, #5200FF);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.1) 0%, rgba(10, 10, 10, 1) 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('blockchain-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #00D4FF, #5200FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #b0b0b0;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.primary-button {
+    background: linear-gradient(135deg, #00D4FF, #5200FF);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+}
+
+.primary-button.large {
+    padding: 20px 40px;
+    font-size: 1.2rem;
+}
+
+.secondary-button {
+    background: transparent;
+    color: white;
+    padding: 16px 32px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    border-color: #00D4FF;
+    background: rgba(0, 212, 255, 0.1);
+}
+
+/* Video Section */
+.hero-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Value Proposition Section */
+.value-proposition {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 1) 0%, rgba(20, 20, 20, 1) 100%);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #ffffff, #b0b0b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+}
+
+.benefit-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.benefit-description {
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+/* Icon Styles */
+.icon-star, .icon-clock, .icon-unlock, .icon-community,
+.icon-wallet, .icon-deposit, .icon-earnings,
+.icon-contract, .icon-blockchain, .icon-security {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.icon-star { background: linear-gradient(135deg, #FFD93D, #FF6B6B); }
+.icon-clock { background: linear-gradient(135deg, #4ECDC4, #44A08D); }
+.icon-unlock { background: linear-gradient(135deg, #667eea, #764ba2); }
+.icon-community { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.icon-wallet { background: linear-gradient(135deg, #00D4FF, #5200FF); }
+.icon-deposit { background: linear-gradient(135deg, #FFD93D, #FF6B6B); }
+.icon-earnings { background: linear-gradient(135deg, #4ECDC4, #44A08D); }
+.icon-contract { background: linear-gradient(135deg, #00D4FF, #5200FF); }
+.icon-blockchain { background: linear-gradient(135deg, #4ECDC4, #44A08D); }
+.icon-security { background: linear-gradient(135deg, #FFD93D, #FF6B6B); }
+
+.icon-star::after { content: "⭐"; font-size: 24px; }
+.icon-clock::after { content: "🕒"; font-size: 24px; }
+.icon-unlock::after { content: "🔓"; font-size: 24px; }
+.icon-community::after { content: "👥"; font-size: 24px; }
+.icon-wallet::after { content: "💳"; font-size: 24px; }
+.icon-deposit::after { content: "💰"; font-size: 24px; }
+.icon-earnings::after { content: "📈"; font-size: 24px; }
+.icon-contract::after { content: "📋"; font-size: 24px; }
+.icon-blockchain::after { content: "⛓️"; font-size: 24px; }
+.icon-security::after { content: "🔒"; font-size: 24px; }
+
+/* How It Works Section */
+.how-it-works {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 1) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.step {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 212, 255, 0.15);
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 2.5rem;
+    background: linear-gradient(135deg, #00D4FF, #5200FF);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.step-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.step-description {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Trust & Transparency Section */
+.trust-transparency {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 1) 0%, rgba(20, 20, 20, 1) 100%);
+}
+
+.trust-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.trust-features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.trust-feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.trust-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.trust-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.trust-info p {
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+/* Blockchain Animation */
+.trust-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockchain-animation {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.block {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #00D4FF, #5200FF);
+    border-radius: 12px;
+    animation: pulse 2s infinite;
+}
+
+.block-1 { top: 70px; left: 0; animation-delay: 0s; }
+.block-2 { top: 70px; left: 120px; animation-delay: 0.5s; }
+.block-3 { top: 70px; left: 240px; animation-delay: 1s; }
+
+.connection {
+    position: absolute;
+    height: 3px;
+    background: linear-gradient(90deg, #00D4FF, #5200FF);
+    top: 98px;
+    animation: flow 2s infinite;
+}
+
+.connection-1 { left: 60px; width: 60px; animation-delay: 0.25s; }
+.connection-2 { left: 180px; width: 60px; animation-delay: 0.75s; }
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes flow {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Community Section */
+.community {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 1) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+.community-content {
+    text-align: center;
+}
+
+.community-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00D4FF, #5200FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #b0b0b0;
+    font-weight: 500;
+}
+
+.community-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    text-align: left;
+}
+
+.feature {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.feature h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.feature p {
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+.community-cta {
+    margin-top: 3rem;
+}
+
+.cta-note {
+    color: #b0b0b0;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    padding: 3rem 0 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.footer-description {
+    color: #b0b0b0;
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.footer-column a {
+    display: block;
+    color: #b0b0b0;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #00D4FF;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, #00D4FF, #5200FF);
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .trust-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .blockchain-animation {
+        width: 250px;
+        height: 150px;
+    }
+    
+    .block {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .block-1 { top: 50px; left: 0; }
+    .block-2 { top: 50px; left: 100px; }
+    .block-3 { top: 50px; left: 200px; }
+    
+    .connection {
+        top: 73px;
+    }
+    
+    .connection-1 { left: 50px; width: 50px; }
+    .connection-2 { left: 150px; width: 50px; }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        display: none;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        padding: 2rem 0;
+        min-height: 90vh;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .primary-button, .secondary-button {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .steps-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .trust-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .trust-visual {
+        order: -1;
+    }
+    
+    .community-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .community-features {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Mobile menu toggle */
+    .nav-links {
+        position: relative;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .primary-button, .secondary-button {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+    
+    .primary-button.large {
+        padding: 16px 32px;
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .benefit-card, .step, .stat, .feature {
+        padding: 1.5rem;
+    }
+    
+    .benefit-title, .step-title {
+        font-size: 1.2rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .trust-feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .trust-icon {
+        margin: 0 auto;
+    }
+    
+    .blockchain-animation {
+        width: 200px;
+        height: 120px;
+    }
+    
+    .block {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .block-1 { top: 40px; left: 0; }
+    .block-2 { top: 40px; left: 80px; }
+    .block-3 { top: 40px; left: 160px; }
+    
+    .connection {
+        top: 58px;
+        height: 2px;
+    }
+    
+    .connection-1 { left: 40px; width: 40px; }
+    .connection-2 { left: 120px; width: 40px; }
+    
+    .footer-content {
+        gap: 1.5rem;
+    }
+    
+    .footer-description {
+        max-width: 100%;
+    }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 1rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .primary-button, .secondary-button {
+        width: auto;
+        max-width: none;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .benefit-card:hover,
+    .step:hover,
+    .primary-button:hover,
+    .secondary-button:hover,
+    .cta-button:hover {
+        transform: none;
+    }
+    
+    .benefit-card:active,
+    .step:active {
+        transform: translateY(-2px);
+    }
+    
+    .primary-button:active,
+    .secondary-button:active,
+    .cta-button:active {
+        transform: translateY(-1px);
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero::before {
+        background-image: url('blockchain-bg.jpg');
+        background-size: cover;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .block,
+    .connection {
+        animation: none;
+    }
+}
+
+/* Dashboard Styles */
+.dashboard-nav {
+    background: #1a1a2e;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.user-stats {
+    background: #16213e;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history th, 
+.transaction-history td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #2d3748;
+}
+
+.positive { color: #48bb78; }
+.negative { color: #f56565; }
+

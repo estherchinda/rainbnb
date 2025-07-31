@@ -1,0 +1,24 @@
+{
+  "name": "rainbnb-landing",
+  "version": "1.0.0",
+  "description": "A fully functional, clean, mobile-optimized and modern landing page for RainBNB, a Web3 crypto platform that allows users to earn daily crypto dividends through blockchain automation.",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build completed - static files ready for deployment'",
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "cssnano": "^7.1.0",
+    "postcss": "^8.5.6"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.5"
+  }
+}
